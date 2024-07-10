@@ -91,7 +91,7 @@
                 style="@style/operatorbutton"
                 android:id="@+id/btn_dividir"
                 android:textSize="20dp"
-                android:onClick="onOperadorClick"
+                android:onClick="onOperadoresClick"
                 android:text="/" />
 
 
@@ -128,7 +128,7 @@
                 style="@style/operatorbutton"
                 android:id="@+id/btn_multiplicar"
                 android:textSize="20dp"
-                android:onClick="onOperadorClick"
+                android:onClick="onOperadoresClick"
                 android:text="*" />
 
 
@@ -165,7 +165,7 @@
                 style="@style/operatorbutton"
                 android:id="@+id/btn_somar"
                 android:textSize="20dp"
-                android:onClick="onOperadorClick"
+                android:onClick="onOperadoresClick"
                 android:text="+" />
 
 
@@ -202,7 +202,7 @@
                 style="@style/operatorbutton"
                 android:id="@+id/btn_subtracao"
                 android:textSize="30dp"
-                android:onClick="onOperadorClick"
+                android:onClick="onOperadoresClick"
                 android:text="-" />
 
 
@@ -238,9 +238,11 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
                 android:id="@+id/btn_igual"
-                android:textSize="20dp"
+                android:textSize="30dp"
+                android:text="="
                 android:onClick="onResultClick"
-                android:text="=" />
+                android:textColor="@color/white"
+                android:backgroundTint="@color/btnBackground2" />
 
 
         </LinearLayout>
