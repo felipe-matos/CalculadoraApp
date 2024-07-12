@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     var stateError = false
     var lastDot = false
 
+
     private lateinit var expression : Expression
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,26 +36,39 @@ class MainActivity : AppCompatActivity() {
         lastNumeric = false
         binding.resultTv.visibility = View.GONE
 
-    }
-    fun onResultClick(view: View) {
+    } //ok
+
+    fun onEqualClick(view: View) {
 
         onEqual()
         binding.dataTv.text = binding.resultTv.text.toString().drop(1)
-    }
-    fun onOperadorClick(view: View) {
+    } //ok
+
+    fun onDigitClick(view: View) {
 
         if (stateError){
             binding.dataTv.text = (view as Button) .text
             stateError = false
 
         }else{
-         binding.dataTv.append((view as Button).text)
+            binding.dataTv.append((view as Button).text)
         }
 
         lastNumeric = true
         onEqual()
+
     }
 
+    fun onOperatorClick(view: View) {
+
+        if(!stateError && lastNumeric){
+            binding.dataTv.append((view as Button).text)
+            lastDot = false
+            lastNumeric = false
+            onEqual()
+        }
+
+    } //ok
 
     fun onBackClick(view: View) {
 
@@ -71,18 +85,19 @@ class MainActivity : AppCompatActivity() {
 
         }catch (e: Exception ){
 
-            binding.resultTv.text=""
+            binding.resultTv.text= ""
             binding.resultTv.visibility = View.GONE
-            Log.e("error",e.toString() )
+            Log.e("app_info",e.toString() )
         }
-    }
+    } // ok
+
     fun onClearClick(view: View) {
 
         binding.dataTv.text = ""
         lastNumeric = false
 
 
-    }
+    } // ok
 
     fun onEqual(){
 
@@ -92,7 +107,6 @@ class MainActivity : AppCompatActivity() {
             expression = ExpressionBuilder(txt).build()
 
             try {
-
                 val result = expression.evaluate()
 
                 binding.resultTv.visibility = View.VISIBLE
@@ -110,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onOperadoresClick(view: View) {
+    /*fun onOperadoresClick(view: View) {
 
         if(!stateError && lastNumeric){
             binding.dataTv.append((view as Button).text)
@@ -119,5 +133,8 @@ class MainActivity : AppCompatActivity() {
             onEqual()
         }
     }
+*/
+
+
 
 }

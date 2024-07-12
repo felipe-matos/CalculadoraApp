@@ -66,14 +66,14 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_limpar"
+                android:id="@+id/btn_clear"
                 android:textSize="20dp"
                 android:onClick="onClearClick"
                 android:text="C" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/digitbutton"
-                android:id="@+id/btn_backspace"
+                android:id="@+id/btn_back"
                 android:onClick="onBackClick"
                 android:text="1"
                 app:icon="@drawable/backspace_24"
@@ -82,16 +82,16 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_porcetagem"
+                android:id="@+id/btn_modulo"
                 android:textSize="20dp"
-                android:onClick="onOperadorClick"
+                android:onClick="onOperatorClick"
                 android:text="%" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_dividir"
+                android:id="@+id/btn_divide"
                 android:textSize="20dp"
-                android:onClick="onOperadoresClick"
+                android:onClick="onOperatorClick"
                 android:text="/" />
 
 
@@ -126,9 +126,9 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_multiplicar"
+                android:id="@+id/btn_multip"
                 android:textSize="20dp"
-                android:onClick="onOperadoresClick"
+                android:onClick="onOperatorClick"
                 android:text="*" />
 
 
@@ -163,9 +163,9 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_somar"
+                android:id="@+id/btn_add"
                 android:textSize="20dp"
-                android:onClick="onOperadoresClick"
+                android:onClick="onOperatorClick"
                 android:text="+" />
 
 
@@ -200,9 +200,9 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_subtracao"
+                android:id="@+id/btn_subtr"
                 android:textSize="30dp"
-                android:onClick="onOperadoresClick"
+                android:onClick="onOperatorClick"
                 android:text="-" />
 
 
@@ -216,7 +216,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_ac"
+                android:id="@+id/btn_allclean"
                 android:textSize="20dp"
                 android:onClick="onAllclearClick"
                 android:text="AC" />
@@ -230,17 +230,17 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/digitbutton"
-                android:id="@+id/btn_botaoponto"
+                android:id="@+id/btn_dot"
                 android:textSize="30dp"
                 android:onClick="onDigitClick"
                 android:text="." />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/operatorbutton"
-                android:id="@+id/btn_igual"
+                android:id="@+id/btn_equal"
                 android:textSize="30dp"
                 android:text="="
-                android:onClick="onResultClick"
+                android:onClick="onEqualClick"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/btnBackground2" />
 
